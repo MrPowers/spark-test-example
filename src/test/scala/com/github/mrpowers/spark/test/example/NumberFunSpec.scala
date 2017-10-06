@@ -15,14 +15,14 @@ class NumberFunSpec
 
   it("appends an is_even column to a Dataframe") {
 
-    val sourceDf = Seq(
+    val sourceDF = Seq(
       (1),
       (8),
       (12)
     ).toDF("number")
 
-    val actualDf = sourceDf
-      .withColumn("is_even", NumberFun.isEvenUdf(col("number")))
+    val actualDF = sourceDF
+      .withColumn("is_even", NumberFun.isEvenUDF(col("number")))
 
     val expectedSchema = List(
       StructField("number", IntegerType, false),
@@ -35,12 +35,12 @@ class NumberFunSpec
       Row(12, true)
     )
 
-    val expectedDf = spark.createDataFrame(
+    val expectedDF = spark.createDataFrame(
       spark.sparkContext.parallelize(expectedData),
       StructType(expectedSchema)
     )
 
-    assertSmallDataFrameEquality(actualDf, expectedDf)
+    assertSmallDataFrameEquality(actualDF, expectedDF)
 
   }
 

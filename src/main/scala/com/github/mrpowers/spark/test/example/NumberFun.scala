@@ -8,6 +8,6 @@ object NumberFun {
     n % 2 == 0
   }
 
-  val isEvenUdf = udf[Boolean, Integer](isEven)
+  val isEvenUDF = udf[Boolean, Integer](isEven)
 
 }

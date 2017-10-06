@@ -22,7 +22,7 @@ class ConverterSpec
 
   }
 
-  describe(".underscoreColumnNames") {
+  describe(".snakeCaseColumns") {
 
     it("snake_cases the column names of a DataFrame") {
 

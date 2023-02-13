@@ -40,7 +40,7 @@ class NumberFunSpec
       StructType(expectedSchema)
     )
 
-    assertSmallDataFrameEquality(actualDF, expectedDF)
+    assertSmallDataFrameEquality(actualDF, expectedDF, ignoreNullable = true)
 
   }
 

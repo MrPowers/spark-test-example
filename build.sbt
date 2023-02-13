@@ -16,4 +16,4 @@ libraryDependencies += "com.github.mrpowers" %% "spark-fast-tests" % "0.23.0" % 
 libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.1" % "test"
 
 fork in Test := true
-javaOptions ++= Seq("-Xms512M", "-Xmx2048M", "-XX:+CMSClassUnloadingEnabled")
+javaOptions ++= Seq("-Xms512M", "-Xmx2048M")

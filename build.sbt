@@ -2,7 +2,7 @@ name := "spark-test-example"
 
 version := "0.0.1"
 
-scalaVersion := "2.11.8"
+scalaVersion := "2.11.12"
 
 val sparkVersion = "2.4.8"
 

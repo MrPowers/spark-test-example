@@ -4,13 +4,15 @@ version := "0.0.1"
 
 scalaVersion := "2.11.8"
 
-sparkVersion := "2.2.0"
+val sparkVersion = "2.4.8"
 
-sparkComponents ++= Seq("sql")
+libraryDependencies ++= Seq(
+  "org.apache.spark" %% "spark-sql" % sparkVersion
+)
 
-spDependencies += "mrpowers/spark-daria:2.2.0_0.12.0"
+libraryDependencies += "com.github.mrpowers" %% "spark-daria" % "0.39.0"
 
-libraryDependencies += "MrPowers" % "spark-fast-tests" % "2.2.0_0.5.0" % "test"
+libraryDependencies += "com.github.mrpowers" %% "spark-fast-tests" % "0.23.0" % "test"
 libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.1" % "test"
 
 fork in Test := true
